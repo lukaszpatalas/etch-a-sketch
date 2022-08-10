@@ -1,5 +1,10 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,6 +17,14 @@ body {
     height: 600px;
     border: 1px solid black;
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(3, calc(900px/3));
+    grid-template-columns: repeat(16, calc(900px/16));
+    grid-template-rows: repeat(16, calc(600px/16));
+}
+
+div {
+    display: grid;
+    place-items: center;
+    border: 1px solid black;
+    width: calc(900px/16);
+    height: calc(600px/16);
 }
