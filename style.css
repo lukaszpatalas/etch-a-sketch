@@ -1,8 +1,14 @@
-.container {
+body {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 98vw;
     height: 98vh;
+}
+
+.container {
+    width: 900px;
+    height: 900px;
+    border: 1px solid black;
 }
