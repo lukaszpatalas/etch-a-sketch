@@ -4,16 +4,15 @@ function createDiv() {
         const div = document.createElement("div");
         container.appendChild(div);
     }
-    container.childNodes[3].classList.toggle("hoverColor");
     return container.childNodes;
 }
 
 function start() {
     const createdDivs = createDiv();
 
-    for (let a = 3; a < 10; a++) {
+    for (let a = 1; a < 257; a++) {
         if (createdDivs.hasOwnProperty(a)) {
-            console.log(createdDivs[a]);
+            createdDivs[a].classList.toggle("hoverColor");
         }
     }
 }
