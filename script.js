@@ -12,10 +12,10 @@ function start() {
 }
 
 
-for (child in container.childNodes) {
+/* for (child in container.childNodes) {
     if (container.childNodes.hasOwnProperty(child)) {
         console.log(child);
     }
-}
+} */
 
 createDiv();
