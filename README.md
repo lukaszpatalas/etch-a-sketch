@@ -10,3 +10,5 @@ Goals:
 the project.
 2. Try not to mix CSS code inside javascript function, but separate
 style from logic.
+3. Try to create shorter, more atomic functions in contrast to
+previous projects.
