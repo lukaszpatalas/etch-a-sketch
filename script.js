@@ -7,6 +7,11 @@ function createDiv() {
     return container.childNodes;
 }
 
+function start() {
+    const createdDivs = createDiv();
+}
+
+
 for (child in container.childNodes) {
     if (container.childNodes.hasOwnProperty(child)) {
         console.log(child);
