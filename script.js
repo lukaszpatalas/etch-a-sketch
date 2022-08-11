@@ -7,12 +7,16 @@ function createDiv() {
     return container.childNodes;
 }
 
+// Think of the way how to pass this parameter to toggle in standalone function
+
 function start() {
     const createdDivs = createDiv();
-
-    for (let a = 1; a < 257; a++) {
-        if (createdDivs.hasOwnProperty(a)) {
-            createdDivs[a].classList.toggle("hoverColor");
+    // Zmien na for each
+    for (div of createdDivs) {
+        if (div.tagName === "DIV") {
+            div.addEventListener('click', function() {
+                this.classList.toggle("hoverColor");
+            });
         }
     }
 }
@@ -20,11 +24,5 @@ function start() {
 function toggleColor(div) {
     div.classList.toggle("hoverColor");
 }
-
-/* for (child in container.childNodes) {
-    if (container.childNodes.hasOwnProperty(child)) {
-        console.log(child);
-    }
-} */
 
 start();
