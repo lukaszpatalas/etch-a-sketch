@@ -8,6 +8,7 @@ function createDiv() {
 }
 
 // Think of the way how to pass this parameter to toggle in standalone function
+// https://stackoverflow.com/questions/9812445/can-i-pass-this-as-a-parameter-to-another-function-in-javascript
 
 function start() {
     const createdDivs = createDiv();
