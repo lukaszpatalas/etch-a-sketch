@@ -11,9 +11,9 @@ function createDiv() {
 // https://stackoverflow.com/questions/9812445/can-i-pass-this-as-a-parameter-to-another-function-in-javascript
 
 function start() {
-    const createdDivs = createDiv();
-    // Zmien na for each
-    for (div of createdDivs) {
+    const divs = createDiv();
+    
+    for (div of divs) {
         if (div.tagName === "DIV") {
             div.addEventListener('click', function() {
                 this.classList.toggle("hoverColor");
