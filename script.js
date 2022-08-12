@@ -15,11 +15,11 @@ function createDiv() {
 function toggleColor(divs) {
     for (div of divs) {
         if (div.tagName === "DIV") {
-            div.addEventListener('mouseover', function () {
-                this.classList.add("hoverColor");
+            div.addEventListener('mouseover', (e) => {
+                e.currentTarget.classList.add("hoverColor");
             });
-            div.addEventListener('mouseout', function() {
-                this.classList.remove("hoverColor");
+            div.addEventListener('mouseout', (e) => {
+                e.currentTarget.classList.remove("hoverColor");
             });
         }
     }
