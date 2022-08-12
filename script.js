@@ -1,4 +1,4 @@
-function start() {
+function main() {
     const divs = createDiv();
     toggleColor(divs);
 }
@@ -25,4 +25,4 @@ function toggleColor(divs) {
     }
 }
 
-start();
+main();
