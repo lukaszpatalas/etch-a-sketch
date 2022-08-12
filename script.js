@@ -16,7 +16,10 @@ function toggleColor(divs) {
     for (div of divs) {
         if (div.tagName === "DIV") {
             div.addEventListener('mouseover', function () {
-                this.classList.toggle("hoverColor");
+                this.classList.add("hoverColor");
+            });
+            div.addEventListener('mouseout', function() {
+                this.classList.remove("hoverColor");
             });
         }
     }
