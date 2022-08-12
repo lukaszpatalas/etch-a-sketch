@@ -1,3 +1,8 @@
+function start() {
+    const divs = createDiv();
+    toggleColor(divs);
+}
+
 function createDiv() {
     const container = document.querySelector(".container");
     for (let a = 0; a < 16 * 16; a++) {
@@ -5,14 +10,6 @@ function createDiv() {
         container.appendChild(div);
     }
     return container.childNodes;
-}
-
-// Think of the way how to pass this parameter to toggle in standalone function
-// https://stackoverflow.com/questions/9812445/can-i-pass-this-as-a-parameter-to-another-function-in-javascript
-
-function start() {
-    const divs = createDiv();
-    toggleColor(divs);
 }
 
 function toggleColor(divs) {
