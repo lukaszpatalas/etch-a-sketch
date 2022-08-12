@@ -12,18 +12,17 @@ function createDiv() {
 
 function start() {
     const divs = createDiv();
-    
+    toggleColor(divs);
+}
+
+function toggleColor(divs) {
     for (div of divs) {
         if (div.tagName === "DIV") {
-            div.addEventListener('click', function() {
+            div.addEventListener('click', function () {
                 this.classList.toggle("hoverColor");
             });
         }
     }
-}
-
-function toggleColor(div) {
-    div.classList.toggle("hoverColor");
 }
 
 start();
