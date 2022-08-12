@@ -15,7 +15,7 @@ function createDiv() {
 function toggleColor(divs) {
     for (div of divs) {
         if (div.tagName === "DIV") {
-            div.addEventListener('click', function () {
+            div.addEventListener('mouseover', function () {
                 this.classList.toggle("hoverColor");
             });
         }
