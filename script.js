@@ -1,11 +1,12 @@
 function main() {
-    const divs = createDiv();
+    const divs = createDiv(16);
     toggleColor(divs);
+    setSize();
 }
 
-function createDiv() {
+function createDiv(size) {
     const container = document.querySelector(".container");
-    for (let a = 0; a < 16 * 16; a++) {
+    for (let a = 0; a < size * size; a++) {
         const div = document.createElement("div");
         container.appendChild(div);
     }
@@ -23,6 +24,14 @@ function toggleColor(divs) {
             });
         }
     }
+}
+
+function setSize() {
+    const sizeButton = document.querySelector("#size");
+    sizeButton.addEventListener('click', () => {
+        const size = prompt("How many grids per side?");
+        createDiv(size);
+    })
 }
 
 main();
