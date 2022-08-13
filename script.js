@@ -8,6 +8,7 @@ function createDiv(size) {
     const container = document.querySelector(".container");
     for (let a = 0; a < size * size; a++) {
         const div = document.createElement("div");
+        div.classList.add("div");
         container.appendChild(div);
     }
     return container.childNodes;
