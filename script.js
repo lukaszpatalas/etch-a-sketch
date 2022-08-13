@@ -30,8 +30,16 @@ function setSize() {
     const sizeButton = document.querySelector("#size");
     sizeButton.addEventListener('click', () => {
         const size = prompt("How many grids per side?");
-        createDiv(size);
+        removeDivs();
+        createDiv(size); 
     })
+}
+
+function removeDivs() {
+    const container = document.querySelector(".container");
+    while(container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
 }
 
 main();
