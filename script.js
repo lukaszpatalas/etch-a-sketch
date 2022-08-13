@@ -5,17 +5,19 @@ function main() {
 }
 
 function createDiv(size) {
+    let gridSize = size;
     const container = document.querySelector(".container");
-    if (size <= 100) {
-        let root = document.documentElement;
-        for (let a = 0; a < size * size; a++) {
-            const div = document.createElement("div");
-            div.classList.add("div");
-            root.style.setProperty('--width', `calc(900px/${size})`);
-            root.style.setProperty('--height', `calc(600px/${size})`);
-            root.style.setProperty('--grid-size', `${size}`);
-            container.appendChild(div);
-        }
+    if (gridSize > 100) {
+        gridSize = 16;
+    }
+    let root = document.documentElement;
+    for (let a = 0; a < gridSize * gridSize; a++) {
+        const div = document.createElement("div");
+        div.classList.add("div");
+        root.style.setProperty('--width', `calc(900px/${gridSize})`);
+        root.style.setProperty('--height', `calc(600px/${gridSize})`);
+        root.style.setProperty('--grid-size', `${gridSize}`);
+        container.appendChild(div);
     }
     return container.childNodes;
 }
@@ -36,7 +38,7 @@ function toggleColor(divs) {
 function setSize() {
     const sizeButton = document.querySelector("#size");
     sizeButton.addEventListener('click', () => {
-        const size = prompt("How many grids per side?");
+        const size = prompt("How many grids per side? MAX 100");
         removeDivs();
         const divs = createDiv(size);
         toggleColor(divs);
