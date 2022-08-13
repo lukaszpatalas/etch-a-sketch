@@ -8,6 +8,7 @@ function main() {
 }
 
 function createDiv(size) {
+    iteration = 0;
     let gridSize = size;
     const container = document.querySelector(".container");
     if (gridSize > 100) {
@@ -33,35 +34,35 @@ function toggleColor(divs) {
                 if (iteration < 10) {
                     switch (iteration) {
                         case 0:
-                        color = "#e5e5e5";
-                        break;
+                            color = "#e5e5e5";
+                            break;
                         case 1:
-                        color = "#ccc";
-                        break;
+                            color = "#ccc";
+                            break;
                         case 2:
-                        color = "#b2b2b2";
-                        break;
+                            color = "#b2b2b2";
+                            break;
                         case 3:
-                        color = "#999";
-                        break;
+                            color = "#999";
+                            break;
                         case 4:
-                        color = "#7f7f7f";
-                        break;
+                            color = "#7f7f7f";
+                            break;
                         case 5:
-                        color = "#666";
-                        break;
+                            color = "#666";
+                            break;
                         case 6:
-                        color = "#4c4c4c";
-                        break;
+                            color = "#4c4c4c";
+                            break;
                         case 7:
-                        color = "#333";
-                        break;
+                            color = "#333";
+                            break;
                         case 8:
-                        color = "#191919";
-                        break;
+                            color = "#191919";
+                            break;
                         case 9:
-                        color = "#000";
-                        break;
+                            color = "#000";
+                            break;
                     }
                 }
                 root.style.setProperty('--hover-color', `${color}`);
