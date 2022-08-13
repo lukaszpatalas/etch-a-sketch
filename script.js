@@ -23,9 +23,12 @@ function createDiv(size) {
 }
 
 function toggleColor(divs) {
+    let root = document.documentElement;
     for (div of divs) {
+        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
         if (div.tagName === "DIV") {
             div.addEventListener('mouseover', (e) => {
+                root.style.setProperty('--hover-color', `#${randomColor}`);
                 e.currentTarget.classList.add("hoverColor");
             });
             div.addEventListener('mouseout', (e) => {
@@ -34,6 +37,7 @@ function toggleColor(divs) {
         }
     }
 }
+
 
 function setSize() {
     const sizeButton = document.querySelector("#size");

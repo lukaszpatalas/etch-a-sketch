@@ -32,11 +32,12 @@ div {
 }
 
 .hoverColor {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--hover-color);
 }
 
 :root {
     --width: 0;
     --height: 0;
     --grid-size: 0;
+    --hover-color: rgb(0, 0, 0);
 }
