@@ -23,7 +23,7 @@ body {
     grid-template-rows: repeat(var(--grid-size), var(--height));
 }
 
-.div {
+div {
     display: grid;
     place-items: center;
     border: 1px solid rgb(0, 0, 0);
@@ -36,7 +36,7 @@ body {
 }
 
 :root {
-    --width: calc(900px/16);
-    --height: calc(600px/16);
-    --grid-size: 16;
+    --width: 0;
+    --height: 0;
+    --grid-size: 0;
 }
