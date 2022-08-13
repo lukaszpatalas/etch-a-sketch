@@ -6,14 +6,16 @@ function main() {
 
 function createDiv(size) {
     const container = document.querySelector(".container");
-    let root = document.documentElement;
-    for (let a = 0; a < size * size; a++) {
-        const div = document.createElement("div");
-        div.classList.add("div");
-        root.style.setProperty('--width', `calc(900px/${size})`);
-        root.style.setProperty('--height', `calc(600px/${size})`);
-        root.style.setProperty('--grid-size', `${size}`);
-        container.appendChild(div);
+    if (size <= 100) {
+        let root = document.documentElement;
+        for (let a = 0; a < size * size; a++) {
+            const div = document.createElement("div");
+            div.classList.add("div");
+            root.style.setProperty('--width', `calc(900px/${size})`);
+            root.style.setProperty('--height', `calc(600px/${size})`);
+            root.style.setProperty('--grid-size', `${size}`);
+            container.appendChild(div);
+        }
     }
     return container.childNodes;
 }
@@ -36,14 +38,14 @@ function setSize() {
     sizeButton.addEventListener('click', () => {
         const size = prompt("How many grids per side?");
         removeDivs();
-        const divs = createDiv(size); 
+        const divs = createDiv(size);
         toggleColor(divs);
     })
 }
 
 function removeDivs() {
     const container = document.querySelector(".container");
-    while(container.firstChild) {
+    while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
 }
