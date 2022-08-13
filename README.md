@@ -14,3 +14,4 @@ style from logic.
 What to fix:
 
 1. Try to create shorter, more atomic functions.
+2. Think of the way to remove global variables.
