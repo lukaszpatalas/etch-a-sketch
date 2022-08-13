@@ -1,3 +1,6 @@
+let iteration = 0;
+let color = "#4c4c4c";
+
 function main() {
     const divs = createDiv(16);
     toggleColor(divs);
@@ -25,11 +28,45 @@ function createDiv(size) {
 function toggleColor(divs) {
     let root = document.documentElement;
     for (div of divs) {
-        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
         if (div.tagName === "DIV") {
             div.addEventListener('mouseover', (e) => {
-                root.style.setProperty('--hover-color', `#${randomColor}`);
+                if (iteration < 10) {
+                    switch (iteration) {
+                        case 0:
+                        color = "#e5e5e5";
+                        break;
+                        case 1:
+                        color = "#ccc";
+                        break;
+                        case 2:
+                        color = "#b2b2b2";
+                        break;
+                        case 3:
+                        color = "#999";
+                        break;
+                        case 4:
+                        color = "#7f7f7f";
+                        break;
+                        case 5:
+                        color = "#666";
+                        break;
+                        case 6:
+                        color = "#4c4c4c";
+                        break;
+                        case 7:
+                        color = "#333";
+                        break;
+                        case 8:
+                        color = "#191919";
+                        break;
+                        case 9:
+                        color = "#000";
+                        break;
+                    }
+                }
+                root.style.setProperty('--hover-color', `${color}`);
                 e.currentTarget.classList.add("hoverColor");
+                iteration++;
             });
             div.addEventListener('mouseout', (e) => {
                 e.currentTarget.classList.remove("hoverColor");
