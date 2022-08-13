@@ -14,8 +14,8 @@ function createDiv(size) {
     for (let a = 0; a < gridSize * gridSize; a++) {
         const div = document.createElement("div");
         div.classList.add("div");
-        root.style.setProperty('--width', `calc(900px/${gridSize})`);
-        root.style.setProperty('--height', `calc(600px/${gridSize})`);
+        root.style.setProperty('--width', `calc(800px/${gridSize})`);
+        root.style.setProperty('--height', `calc(800px/${gridSize})`);
         root.style.setProperty('--grid-size', `${gridSize}`);
         container.appendChild(div);
     }

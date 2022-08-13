@@ -15,9 +15,9 @@ body {
 }
 
 .container {
-    width: 900px;
-    height: 600px;
-    border: 1px solid black;
+    width: 800px;
+    height: 800px;
+    border: 1px solid #eee;
     display: grid;
     grid-template-columns: repeat(var(--grid-size), var(--width));
     grid-template-rows: repeat(var(--grid-size), var(--height));
@@ -26,7 +26,7 @@ body {
 div {
     display: grid;
     place-items: center;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid #eee;
     width: var(--width);
     height: var(--height);
 }
