@@ -69,9 +69,9 @@ function toggleColor(divs) {
                 e.currentTarget.classList.add("hoverColor");
                 iteration++;
             });
-            div.addEventListener('mouseout', (e) => {
+/*             div.addEventListener('mouseout', (e) => {
                 e.currentTarget.classList.remove("hoverColor");
-            });
+            }); */
         }
     }
 }
